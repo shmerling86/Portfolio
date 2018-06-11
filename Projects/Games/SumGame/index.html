@@ -1,0 +1,55 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adding 2 Numbers</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+</head>
+
+<body onload="initGame()">
+
+  <div class="quiz animated tada">
+    <div class="quiz-content">
+      <div class="question">
+        What is the sum of
+        <span class="text-info" id="field1"></span> and
+        <span class="text-info" id="field2"></span> ?
+      </div>
+      <div class="options ">
+        <div class="fields animated zoomIn">
+          <div class="field-block" id="option1" onclick="checkClick(this)"></div>
+        </div>
+        <div class="fields animated zoomIn">
+          <div class="field-block" id="option2" onclick="checkClick(this)"></div>
+        </div>
+        <div class="fields animated zoomIn">
+          <div class="field-block" id="option3" onclick="checkClick(this)"></div>
+        </div>
+        <div class="fields animated zoomIn">
+          <div class="field-block" id="option4" onclick="checkClick(this)"></div>
+        </div>
+      </div>
+      <div class="after hide animated zoomindown" id="after">
+
+      </div>
+      <div class="contain ">
+        <span style="font-size:1.2em">Time:</span>
+        <span class="timer" id="timer">0</span>
+        <span style="font-size:1.2em">Score:</span>
+        <span class="score" id="score">0</span>
+
+      </div>
+
+      <div class="play-again">
+        <a class="button" onclick="playAgain()">Play again</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

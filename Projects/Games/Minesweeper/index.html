@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Rammetto+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mina" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Minesweeper game</title>
+</head>
+
+<body onload="initGame()">
+
+    <div class="diff">
+        <h1>Minesweeper</h1>
+    </div>
+
+    <div class="endGame">Game over!</div>
+    <div class= "frame">
+        <div>
+            <button class="btns" onclick="changeLevel('Easy')">Easy</button>
+            <button class="btns" onclick="changeLevel('Medium')">Medium</button>
+            <button class="btns" onclick="changeLevel('Expert')">Expert</button>
+        </div>
+        <div class="mines-counter">
+            <span>Mines:</span>
+            <span class="mines-num">0</span>
+        </div>
+
+        <table class="center">
+            <tbody id="board" class="board"></tbody>
+        </table>
+
+        <div class='timeBox'>
+            <span class='gameTime'>Game time: </span>
+            <span class="timer">0.0</span>
+        </div>
+
+        <div>
+            <button class="low-btn" onclick="reset()">Restart</button>
+        </div>
+    </div>
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

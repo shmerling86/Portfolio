@@ -1,0 +1,39 @@
+
+.upMenu {
+    background-color: lightgray;
+    padding: 10px;
+    border-bottom: 10px solid black;
+    margin-bottom: 30px;
+    text-align: center;
+
+}
+
+.downMenu {
+    background-color: antiquewhite;
+    padding: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.userGuess{
+    background-color: lightgreen;
+    padding: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+
+}
+
+.btn {
+    border-radius: 10%;
+    text-align: center;
+    font-size: 1.2em
+
+}
+
+.btn:hover {
+    color:orange;
+}
+
+.btn:focus {
+    outline: none;
+}

@@ -1,0 +1,106 @@
+
+
+.board {
+display: flex;
+flex-flow: row wrap;
+align-items: center;
+justify-content: center;
+align-content: space-between;
+background-color: rgba(255, 255, 128, .5);
+}
+
+.header {
+display: flex;
+flex-direction: row-reverse; 
+align-content: center;
+justify-content: space-around;
+background-color: rgba(255, 255, 128, .5);
+padding: 20px;
+border-bottom: 10px solid darkcyan;
+color:darkcyan;
+font-size: 1.5em;
+text-align: center;
+}
+
+.header img {
+float:right;
+
+}
+
+.card-wrapper {
+width: 165px;
+height: 165px;
+position: relative;
+display: flex;
+margin: 10px 8px 40px;
+perspective: 800px;
+}
+
+.card {
+position: relative;
+width: 100%;
+height: 100%;
+transition: transform 1s;
+transform-style: preserve-3d;
+}
+
+.card.flipped {
+transform: rotateY( 180deg );
+}
+
+.card .back{
+flex-direction: column-reverse;
+display: flex;
+height: 100%;
+justify-content: space-between;
+align-items: center;
+transform: rotateY( 180deg );
+}
+
+.card img {
+display: block;
+height: 100%;
+width: 100%;
+line-height: 260px;
+color: white;
+text-align: center;
+font-weight: bold;
+font-size: 140px;
+position: absolute;
+backface-visibility: hidden;
+}
+
+p {
+top: 80%;
+}
+
+.card-text {
+background-color: rgba(18, 90, 119, 0.5);
+text-align: center;
+transform: rotateY(-180deg);
+/* outline: 1px black solid; */
+height: 10px;
+}
+
+footer{
+display: flex;
+flex-flow: row-reverse nowrap;
+align-content: center;
+justify-content: space-around;
+background-color: rgba(255, 255, 128, .5);
+padding: 20px 0 20px;
+border-bottom: 10px solid darkcyan;
+color:darkcyan;
+font-size: 1.5em;
+text-align: center;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .board {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-around;
+    justify-content: center;
+    }
+}

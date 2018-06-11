@@ -1,0 +1,119 @@
+
+    * {
+        box-sizing: border-box;
+    } 
+    
+    body { 
+        background-color:rgb(211, 211, 185);
+        background-size: cover; 
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .header {
+        font-size: 25px;
+        text-align: center;
+        position: relative;
+        color: black;
+    }
+
+    .card {
+        position: relative;
+        height: 165px;
+        width: 165px;    
+        float: left;
+        margin: 5px;
+        transition: transform 1s;
+        transform-style: preserve-3d; 
+    }
+
+    .card.flipped {
+        transform: rotateY(180deg );
+    } 
+
+    .card .back {
+        flex-direction: column-reverse;
+        display: flex;
+        height: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .face {
+        transform: rotateY( 180deg );
+        }
+
+    .img {
+        border: 0;
+    }
+    
+    .card img {
+        display: block;
+        height: 165px;
+        width: 165px;   
+        line-height: 260px;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        font-size: 140px;
+        position: absolute;
+        backface-visibility: hidden;
+        
+    }
+
+    .board {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        align-content: space-between;
+    }
+
+    .btn{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    
+    .KaftorPlayAgain{
+        background-color: #007ea7; 
+        border: 1px solid #007ea7;
+        color: white;
+        text-align: center;
+        display: inline-block;
+        font-size: 200%;
+        cursor: pointer;
+        transition-duration: 0.6s;
+        border-radius: 40px; 
+        margin: 40px auto;
+        width: 30%;
+        
+    }
+    
+    .KaftorPlayAgain:hover {
+        background-color:rgb(2, 162, 216) ;
+        color: white;
+        text-align: center;
+        display: inline-block;
+        font-size: 200%;
+        cursor: pointer;
+        transition-duration: 0.6s;
+        border-radius: 40px; 
+        margin: 40px auto;
+        width: 30%;
+        border: 1px solid rgb(2, 162, 216) ;
+
+    }
+    
+
+ @media only screen and (min-width: 712px) {
+    .board {
+        margin: 0 165px;
+        }
+    }
+
+@media only screen and (max-width: 400px) {
+     .board {
+        margin: 0;
+        }
+    }
