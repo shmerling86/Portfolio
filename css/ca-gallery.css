@@ -108,7 +108,8 @@ section h2.section-heading h2 {
 form{
     min-height: 490px;
     display: block;
-    margin-left:31%; 
+    width: 50%;
+    margin: 0 695px;
 }
 
 input[type=submit] {
@@ -116,12 +117,9 @@ input[type=submit] {
     color: white;
     border-color:#fff;
     padding: 10px;
+    margin: 8px 435px;
     border-radius: 4px;
     cursor: pointer;
-    position: absolute;
-    bottom: 0;
-    left: 46.5%;
-    margin: 10px 0;
     
 }
 input[type=submit]:hover {
