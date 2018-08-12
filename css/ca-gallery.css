@@ -48,7 +48,7 @@ section {
 
 #about .msg {
     max-width: 850px;
-    height: 250px;  
+    height: auto;  
     border-radius: 10px;
     box-shadow: 0px 10px 50px rgba(100, 100, 100, 0.7);
     background: #2f2f2f;
@@ -76,7 +76,7 @@ section {
 
 #about .section-heading {
 
-    padding-top: 100px;
+    padding-top: 130px;
 }
 
 .section h2.section-heading {
@@ -154,9 +154,7 @@ section h3.section-subheading {
 }
 
 #services{
-    background: #f0f0f0;
-    height: 949px;
-}
+    background: #f0f0f0;}
 
 #services img{
 width: 170px;
@@ -165,11 +163,11 @@ padding: 20px;
 }
 
 section#services  {
-    padding: 45px;
-    min-height: 600px;
+    padding-top: 130px;
+    height: auto;
 }
 section#services .container{
-    padding-top: 55px;
+    padding-bottom: 175px;
 }
 
 #mainNav .container{

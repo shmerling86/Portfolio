@@ -11,8 +11,7 @@ and (min-width:1500px) {
     }
 }
 
-@media only screen
-and (max-width:800px) {
+@media only screen and (max-width:800px) {
     header.masthead {
         min-height: 470px;
         text-align: center;
@@ -41,12 +40,12 @@ and (max-width:800px) {
         width: 350px;
         height: 300px;
         font-weight: 100;
-        margin-left: 130px;
+        /* margin-left: 130px; */
     }
 
     .msg a {
-        margin: 0 0 0px 260px;
-        padding-bottom: 20px;
+        margin: 0px -5px -10px 260px;
+        /* padding-bottom: 20px; */
         transition-delay: 0.01s;
         font-size: 20px;
     }
@@ -65,7 +64,7 @@ and (max-width:800px) {
 
     
     #about .col-md-4 {
-        top: 180px;
+        /* top: 180px; */
     }
 
     #about .col-md-4 img {
