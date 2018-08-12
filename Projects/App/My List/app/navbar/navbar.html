@@ -1,0 +1,45 @@
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-light  bg-light " ng-controller="navbarCtrl">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+            <div>
+                <img ng-src="app/img/cdcadbe371756c939a4c5596b21704ed.png" width="120" height="50" class="d-inline-block align-top" alt="">
+                <h3 class="text-danger text-center">MYLIST</h3>
+            </div>
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item ">
+                    <a class="nav-link p-1" href="#about" >ABOUT</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link p-1" href="#partners" >PARTNERS</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link p-1" href="#contact" >CONTACT</a>
+                </li>
+
+
+                <li class="nav-item " ng-hide="isUserLoggedIn()">
+                    <a ng-href="#!/signup" class="nav-link  p-1" >SIGN UP</a>
+                </li>
+
+                <li class="nav-item" ng-hide="isUserLoggedIn()">
+                    <a ng-href="#!/login" class="nav-link  p-1" >LOGIN</a>
+                </li>
+                <li class="nav-item" ng-show="isUserLoggedIn()">
+                    <a ng-href="javascript:void(0)" class="nav-link active  p-1" ng-click="logout()">LOGOUT</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

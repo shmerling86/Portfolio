@@ -1,0 +1,125 @@
+<list-navbar></list-navbar>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 mx-auto">
+                <div class="form-group" ng-show="checkIfListEmpty()">
+                    <input type="text" class="form-control" ng-model="search" placeholder="Search your gift..">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-8 mx-auto">
+                <div class="accordion" id="accordionExample">
+                    <div class="card" ng-hide="userListItem.isPaid" ng-repeat="userListItem in userListItems | filter : {productName : search}">
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col-sm-10">
+                                    <input type="checkbox" ng-model="userListItem.selected" />
+                                    <button class="btn btn-link" type="button" id="headingOne" data-toggle="collapse"
+                                     data-target="#{{userListItem.productName}}" aria-expanded="false" aria-controls="{{userListItem.productName}}">
+                                        {{userListItem.productName}}
+                                    </button>
+                                </div>
+                                <div class="col-sm-2 ml-auto">
+                                    <img id="produntImg" ng-src="{{userListItem.image}}" data-toggle="modal" data-target=".{{userListItem.productName}}" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade {{userListItem.productName}}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+
+                                    <div class="card-body">
+                                        <dl class="row">
+                                            <div class="col-sm-10">
+                                                <dt class="col-sm-3">Name:</dt>
+                                                <dd class="col-sm-9"> {{userListItem.productName}}</dd>
+
+
+                                                <dt class="col-sm-3">Description</dt>
+                                                <dd class="col-sm-9">
+                                                    <p>{{userListItem.description}}</p>
+                                                </dd>
+
+                                                <dt class="col-sm-3">Zone:</dt>
+                                                <dd class="col-sm-9">{{userListItem.zone}}</dd>
+
+                                                <dt class="col-sm-3 text-truncate">Brand</dt>
+                                                <dd class="col-sm-9">{{userListItem.brand}}</dd>
+
+                                                <dt class="col-sm-3">Price</dt>
+                                                <dd class="col-sm-9">{{userListItem.price}}</dd>
+                                            </div>
+                                            <div class="col-sm-2 my-auto">
+                                                <div class="row"></div>
+                                                <a href="{{userListItem.image}}">
+                                                    <img ng-src="{{userListItem.image}}" alt="">
+                                                </a>
+                                            </div>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="{{userListItem.productName}}" class="collapse" aria-labelledby="headingOne">
+                            <div class="card-body">
+                                <dl class="row">
+                                    <div class="col-sm-10">
+                                        <dt class="col-sm-3">Name:</dt>
+                                        <dd class="col-sm-9">{{userListItem.productName}}</dd>
+
+
+                                        <dt class="col-sm-3">Description</dt>
+                                        <dd class="col-sm-9">
+                                            <p>{{userListItem.description}}</p>
+                                        </dd>
+
+                                        <dt class="col-sm-3">Zone:</dt>
+                                        <dd class="col-sm-9">{{userListItem.zone}}</dd>
+
+                                        <dt class="col-sm-3 text-truncate">Brand</dt>
+                                        <dd class="col-sm-9">{{userListItem.brand}}</dd>
+
+                                        <dt class="col-sm-3">Price</dt>
+                                        <dd class="col-sm-9">{{userListItem.price}}</dd>
+                                    </div>
+                                    <div class="col-sm-2 my-auto">
+                                        <div class="row"></div>
+                                        <a href="{{userListItem.image}}">
+                                            <img ng-src="{{userListItem.image}}" alt="">
+                                        </a>
+                                    </div>
+                                </dl>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div  class="row mb-5 mt-5">
+                <div class="col-sm-8 mx-auto">
+                    <div class="text-center ">
+                        <p class="alert alert-danger" ng-hide="checkIfListEmpty()">
+                            All gifts are purchased, see you next time.
+                            <a href="#!/">Go Home</a>
+                        </p>
+                    </div>
+
+                    <div class="row mt-5 mx-auto" >
+                        <div class="col-sm-12">
+                            <div class="text-center font-weight-bold" ng-show="checkIfListEmpty()">
+                                <h5 class="text-worning">Mark your gift, and click on the ADD button to confirm your purchase.</h5>
+                                <input type="button" style="font-size: 1.8rem" ng-click="getUserProducts()" class="btn btn-success mb-5" value="ADD">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>

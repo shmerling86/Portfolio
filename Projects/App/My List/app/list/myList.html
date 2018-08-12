@@ -1,0 +1,41 @@
+<list-navbar></list-navbar>
+<section>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-sm-8 mx-auto p-3" ng-show="!selectedProducts.length < 1">
+                <a ng-href="#!/products">
+                    <i class="fas fa-plus text-danger float-right" title="Add"></i>
+                </a>
+            </div>
+            <div class="col-sm-8 mx-auto">
+                <ul class="list-group">
+                    <li class="list-group-item" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()" ng-class="{'complete': selectedProduct.isPaid}"
+                        ng-repeat="selectedProduct in selectedProducts" id="txt-list-product">{{selectedProduct.productName}}
+                        <span ng-if="hoverEdit" class="float-right ">
+                            <i class="fas fa-trash" ng-hide="selectedProduct.buyer" ng-click="deleteTask($index)" title="Delete"></i>
+                        </span>
+                        <span title="Purchased by:" ng-show="selectedProduct.buyer" class="float-right my-2 text-dark" id="txt-list">{{selectedProduct.buyer}}</span>
+                    </li>
+                </ul>
+
+                <div ng-if="selectedProducts" class="row mb-5 mt-5">
+                    <div ng-if="selectedProducts.length < 1" class="text-center col-sm-10 mx-auto">
+                        <p class="alert alert-danger">
+                            You have no products in your list, please
+                            <a href="#!/products">Go to shop</a>
+                        </p>
+                    </div>
+
+                    <div class="col-sm-12" ng-if="!selectedProducts.length < 1">
+                        <div class="text-center font-weight-bold">
+                            <h5 class="text-worning">In order to get your code, click NEXT.</h5>
+                            <a href="#!/mylink">
+                                <button style="font-size: 1.8rem" class="btn btn-info mx-auto mb-5">NEXT</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

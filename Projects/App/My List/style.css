@@ -1,0 +1,151 @@
+body{
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 1.8rem
+}
+
+section{
+    min-height: 100vh;
+    padding-top: 120px;
+}
+
+.btn{
+    font-size: 1.1rem;
+}
+
+h1{display: block;}
+
+dd{font-size: 0.8em;}
+dt{font-size: 0.8em;}
+
+
+p{line-height: 2em;}
+
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+} 
+
+form{
+    border: 2px solid rgb(0, 120, 248,0.3);
+    padding: 10px;
+    margin:5px auto;
+    position: relative;
+    font-size: 0.5em;
+    border-radius: 4%; 
+}
+
+#btn-container  button{width:100%;}
+
+img{max-width:100%;}
+
+#produntImg{max-width: 40px;}
+
+#partnersImg{max-width: 90px;}
+
+#headingOne{font-size: 1em;}
+#paidProduct{font-size: 1em;}
+
+#home{
+    background-image: url(app/img/bg-masthead.jpg);
+    background-size: cover; 
+    font-family: 'Kirang Haerang', cursive;
+}
+
+#about,#contact{background-color:rgba(232, 229, 229, 0.6);}
+
+
+#image-hear{
+    background-position: center center;
+    max-width:500px;
+    background-image: linear-gradient(rgba(255 ,255, 255, 0.6),rgba(0, 0, 0, 0.6)), url(app/img/31670456-illustration-pregnancy.jpg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.col-sm-10 {width: auto;}
+
+#no-outline{
+    text-decoration: none;
+}
+
+.nav-link{
+    border: 1px solid;
+    padding: 5px;
+    box-shadow: 5px 10px;
+    margin-left:1px;
+}
+
+
+#txt-list{
+    font-size: 0.7em;
+}
+
+#txt-list-product{
+    font-size: 1.0em;
+}
+
+#exampleModal{
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.alert{
+    font-size: 0.8em;
+}
+
+.complete {
+    color:#6c757d;
+    text-decoration: line-through;
+    }
+
+    .complete #paidProduct:hover{
+    color:#6c757d;
+    text-decoration: line-through;
+    
+    }
+
+@media  screen and (max-width: 500px) {
+
+    #notForSmallScreens{
+        display: none;
+    }
+
+    .btn{
+        font-size: 1.2em;
+    }
+
+    #homeContainer{
+        margin-top: 150px;
+    }
+
+    #produntImg{
+        display: none;
+    }
+
+    .text-about{
+        font-size: 1.5rem;
+    }
+
+    #font-login{
+        font-size: 1.5rem;
+    }
+
+    .form-control{
+        font-size: 1.5rem;
+    }
+
+    #txt-list{
+        font-size: 0.6em;
+    }
+
+   #txt-list-product{
+        font-size: 0.9em;
+   }
+
+}
+

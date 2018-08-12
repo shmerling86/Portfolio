@@ -1,0 +1,141 @@
+<list-navbar>
+</list-navbar>
+
+<section id="home">
+    <div class="container mt-1 ">
+        <div class="row ml-5" id="notForSmallScreens">
+            <div class="col-sm-8 mx-auto ">
+                <div class="ml-3 mt-5 font-weight-bold">
+                    <p>📇 Generate your wish list for
+                        <span class="text-primary">FREE</span>.</p>
+                    <p>&#128106;
+                        <span class="text-danger">Family & Friends</span> can get into your unique list.</p>
+                    <p>✈️ Now they can
+                        <span class="text-success">Choose</span> and
+                        <span class="text-success">Send</span> it to you.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-3 my-4 mx-auto">
+                <a ng-href="#" id="no-outline">
+                    <input type="button" id="homeContainer" class="btn btn-outline-danger btn-block mb-1" data-toggle="modal" data-target="#exampleModal"
+                        ng-hide="isUserLoggedIn()" value="I've got Code" />
+                </a>
+
+                <a ng-href="#!/signup" id="no-outline">
+                    <input type="button" class="btn btn-outline-success btn-block mb-1" ng-hide="isUserLoggedIn()" value="I'm New" />
+                </a>
+
+                <a ng-href="#!/login" id="no-outline">
+                    <input type="button" class="btn btn-outline-primary btn-block mb-1" ng-hide="isUserLoggedIn()" value="Edit my list" />
+                </a>
+
+                <a ng-href="#!/list" id="no-outline">
+                    <input type="button" id="homeContainer" class="btn btn-outline-danger btn-block mb-1" ng-show="isUserLoggedIn()" value="My list"
+                    />
+                </a>
+
+                <a ng-href="#!/products" id="no-outline">
+                    <input type="button" class="btn btn-outline-primary btn-block mb-1" ng-show="isUserLoggedIn()" value="Shop" />
+                </a>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content ">
+                <div class="modal-header">
+                    <h3 class="modal-title text-danger  font-weight-bold" id="exampleModalLabel">MYLIST
+                        <span class="text-muted">Code</span>
+                    </h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <input type="text" ng-model="code" class="p-1 text-center" style="font-size: 0.6em;" placeholder="Code Here" required autofocus>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" ng-click="loginWithCode()" data-dismiss="modal" class="btn btn-primary">Go to Shop</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="about">
+    <div class="container">
+        <h1 class="text-muted">Our Story</h1>
+        <hr>
+        <p class="text-about">Welcome to
+            <span class="text-danger font-weight-bold">MY LIST</span>. A wide selection of products for the important moments
+             in life. You can generate your wish list for
+            <span class="text-primary">FREE</span>. Tell your love ones what is the code to your
+            <span class="text-success">unique list</span>, then they can choose a gift and send it to you. So you avoid unpleasantness,
+             Your loved ones should not run around in search of a gift, Do not receive a gift you have already received, or a gift that is
+            not required.
+        </p>
+    </div>
+</section>
+
+<section id="partners" class="">
+    <div class="container">
+        <h1 class="text-muted">Partners</h1>
+        <hr>
+        <div class="row text-center">
+            <div class="col-md-12">
+                <img id="partnersImg" ng-src="app/img/motsesim.png" alt="">
+                <img id="partnersImg" ng-src="app/img/unnamed.jpg" alt="">
+                <img id="partnersImg" ng-src="app/img/download (1).png" alt="">
+                <img id="partnersImg" ng-src="app/img/download.png" alt="">
+                <img id="partnersImg" ng-src="app/img/6ca953037d5e9cc6ccaa8ffe8eb9b84f.jpg" alt="">
+                <img id="partnersImg" ng-src="app/img/Delta_Israel_New_Logo.svg.png" alt="">
+                <img id="partnersImg" ng-src="app/img/1280px-צומת_ספרים.svg.png" alt="">
+                <img id="partnersImg" ng-src="app/img/dlogo_c051ddde-a7f0-4b9c-a6f7-e0befeef8f2d.jpg" alt="">
+
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section id="contact" class=" mb-5">
+    <div class="container">
+        <h1 class="text-muted">Contact</h1>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <form id="image-hear" ng-controller="contactCtrl">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" placeholder="israel israeli" class="form-control" ng-model="template_params.from_name">
+                    </div>
+                    <div class="form-group">
+                        <label for="Email">Email:</label>
+                        <input type="email" placeholder="israel@israeli.com" class="form-control" ng-model="template_params.from_email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Content</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" ng-model="template_params.message_html" placeholder="We want to hear from you.."></textarea>
+                    </div>
+                    <div class="form-group" id="btn-container">
+                        <button type="button" ng-click="sendEmail()" class="btn btn-outline-primary font-weight-bold ">Send</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div style="font-size: 0.5em;" class="card-footer bg-dark fixed-bottom text-muted text-center mt-5">
+    CODED BY LIOR-SHMERLING
+</div>

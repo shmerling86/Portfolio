@@ -1,0 +1,45 @@
+<list-navbar></list-navbar>
+<section>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-sm-8 mx-auto p-3" ng-show="checkIfListEmpty()">
+                <a ng-href="#!/guestLogin">
+                    <i class="fas fa-plus text-danger float-right" title="Add"></i>
+                </a>
+            </div>
+            <div class="col-sm-8 mx-auto">
+                <ul class="list-group">
+                    <li class="list-group-item" ng-mouseover="hoverIn()" ng-hide="selectedGift.isPaid"
+                     ng-mouseleave="hoverOut()" ng-repeat="selectedGift in selectedGifts">{{selectedGift.productName}}
+                        <span ng-if="!hoverEdit" class="float-right">
+                            {{selectedGift.price}}
+                        </span>
+
+                        <span ng-if="hoverEdit" class="float-right pl-3">
+                            <i class="fas fa-trash" ng-click="deleteTask($index)" title="Delete"></i>
+                        </span>
+                    </li>
+                </ul>
+
+                <div  class="row mb-5 mt-5">
+                    <div ng-hide="checkIfListEmpty()" class="text-center col-sm-10 mx-auto">
+                        <p class="alert alert-danger">
+                                All gifts have been purchased or you have not added a gift. Go
+                            <a href="#!/"> home</a> or go to <a href="#!/guestLogin"> list</a>
+
+                        </p>
+                    </div>
+
+                    <div class="col-sm-12" ng-show="checkIfListEmpty()">
+                        <div class="text-center font-weight-bold">
+                            <h5 class="text-worning">Click on the button in order to greet & pay.</h5>
+                            <a href="#!/payment">
+                                <button style="font-size: 1.8rem" ng-click="reduceGifts()" class="btn btn-info mx-auto mb-5">NEXT</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
