@@ -229,7 +229,7 @@ label {
 
 .msg{
     position: relative;
-    padding-top: 30px;
+    padding: 30px;
 }
 .msg a {
     font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive;
