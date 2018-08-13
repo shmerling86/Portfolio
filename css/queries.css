@@ -12,6 +12,19 @@ and (min-width:1500px) {
 }
 
 @media only screen and (max-width:800px) {
+
+    section#about,
+    section#portfolio,
+    section#services,
+    section#team{
+            padding-top: 50px;
+    }
+
+    #about .section-heading {
+
+        padding-top: 0px;
+    }
+   
     header.masthead {
         min-height: 470px;
         text-align: center;
@@ -73,12 +86,12 @@ and (min-width:1500px) {
       }
 
     section form{
-        width: 500px;
-        margin-left: 250px;
+        /* width: 500px; */
+        /* margin-left: 250px; */
     }
 
     input[type=submit] {
-        margin: 8px 190px;
+        margin: 8px 0px;
     }
 }
 @media only screen and (max-width: 640px) {
@@ -88,7 +101,7 @@ and (min-width:1500px) {
 }
 @media only screen and (max-width: 367px) {
  header.masthead {
-        min-height: 470px;
+        min-height: 570px;
         text-align: center;
         background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(../img/main.jpg);
         background-repeat: no-repeat;
@@ -112,12 +125,12 @@ and (min-width:1500px) {
     }
 
     section form{
-        width: 500px;
-        margin-left: 30px;
+        /* width: 500px; */
+        /* margin-left: 30px; */
     }
 
     input[type=submit] {
-        margin: 8px 190px;
+        margin: 8px 0px;
     }
 
     .msg {    
@@ -126,7 +139,7 @@ and (min-width:1500px) {
         font-size: 10px;
         margin-left: 65px;
         margin-top: 40px;
-        padding-top:25px;
+        padding-top:25px    ;
 
     }
 
