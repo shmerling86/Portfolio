@@ -82,7 +82,7 @@ and (min-width:1500px) {
 
     #about .col-md-4 img {
         width:150px;
-        height: 150px;
+        /* height: 150px; */
       }
 
     section form{
@@ -152,10 +152,10 @@ and (min-width:1500px) {
         left: 1px;
       }
   
-    #about .col-md-4 img {
+    /* #about .col-md-4 img {
         width:150px;
         height: 150px;
-    }
+    } */
 
     #about .col-md-4 h4 {
         font-size: 18px;
